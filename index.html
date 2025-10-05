@@ -1,36 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project-3</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project-3</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
-
-
-    <style>
-        *{
-        font-family: Lucida Sans;
-        }
-
-    </style>
-   
+  <style>
+    *{ font-family: Lucida Sans; }
+  </style>
 </head>
-<body>
+<body class="bg-black">
 
-<!-==============- header-start -==============->
-    
+    <!-==============- header-start -==============->
     <header class="bg-black">
 
       <!-- == start-nav == -->
       <div class="py-4">
-        <div class="flex items-center justify-between container mx-auto px-12">
+        <div class="flex items-center justify-between container mx-auto px-4 sm:px-6 lg:px-12">
           
+          <!-- logo -->
           <div class="flex flex-col">
             <div class="flex items-center gap-3">
               <img src="images/logo_left.png" alt="">
@@ -42,26 +35,25 @@
             <span class="text-xs mt-2 text-center bg-gradient-to-r from-[#F66844] to-[#6b2306] bg-clip-text text-transparent">Unleash your inner athlete</span>
           </div>
 
-          <ul class="hidden lg:flex text-white gap-12">
+          <!-- ===== Desktop Menu ===== -->
+          <ul class="hidden lg:flex text-white gap-10 xl:gap-12">
             <li><a href="" class="pb-1 border-b-2 border-transparent hover:border-[#F66844] transition-all">Home</a></li>
             <li><a href="" class="pb-1 border-b-2 border-transparent hover:border-[#F66844] transition-all">Service</a></li>
             <li><a href="" class="pb-1 border-b-2 border-transparent hover:border-[#F66844] transition-all">About</a></li>
             <li><a href="" class="pb-1 border-b-2 border-transparent hover:border-[#F66844] transition-all">Contacts</a></li>
             <li>
-              <a class="text-white text-center py-3 px-5 bg-gradient-to-r from-[#F66844] to-[#FF921B]" href="">
+              <a class="text-white text-center py-2 px-4 xl:px-5 bg-gradient-to-r from-[#F66844] to-[#FF921B] rounded" href="">
                 Join Us
               </a>
             </li>
           </ul>
 
+          <!-- ===== Mobile Menu ===== -->
           <div class="lg:hidden">
-
             <input type="checkbox" id="menu-toggle" class="hidden peer">
-
-            <label for="menu-toggle" class="cursor-pointer text-white text-3xl">
+            <label for="menu-toggle" class="cursor-pointer text-white text-2xl sm:text-3xl">
               <i class="ri-menu-line"></i>
             </label>
-
             <div class="absolute left-0 top-16 w-full bg-black text-white hidden peer-checked:block">
               <ul class="flex flex-col gap-6 px-6 py-6">
                 <li><a href="#" class="hover:text-[#F66844]">Home</a></li>
@@ -81,108 +73,76 @@
       </div>
 
       <!-- == start-hero == -->
-      
-      <section class="relative lg:h-[120vh] w-full">
+      <section class="relative lg:h-[120vh] w-full flex items-center">
         <img src="images/banner.png" alt="" class="absolute inset-0 w-full h-full object-cover">
 
-        <div class="relative container mx-auto px-4 sm:px-6 lg:px-12 z-10 h-full flex items-center">
+        <div class="relative container mx-auto px-4 sm:px-6 lg:px-12 z-10">
           <div class="text-white max-w-xl">
-            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold">Transform <br>Your Body</h1>
-            <p class="text-sm sm:text-base text-gray-400 mt-6 sm:mt-10">We are dedicated to helping you transform your body and mind through the power of fitness.</p>
+            <h1 class="text-2xl sm:text-4xl lg:text-6xl font-extrabold leading-snug sm:leading-tight">Transform <br>Your Body</h1>
+            <p class="text-xs sm:text-sm lg:text-base text-gray-400 mt-4 sm:mt-6 lg:mt-10">We are dedicated to helping you transform your body and mind through the power of fitness.</p>
 
-            <div class="mt-10 sm:mt-16 lg:mt-24">
-              <a href="#" class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#F66844] to-[#FF921B] text-white hover:from-red-600 hover:to-orange-500 transition">Get Started</a>
-              <a href="#" class="ml-2 sm:ml-3 px-3 sm:px-5 py-2 border-2 border-[#F66844] text-white transition"><i class="fa-regular fa-circle-play text-[#F66844] mr-1 sm:mr-2"></i>Watch Reviews</a>
+            <div class="mt-6 sm:mt-10 lg:mt-16">
+              <a href="#" class="px-3 sm:px-5 py-2 sm:py-3 bg-gradient-to-r from-[#F66844] to-[#FF921B] text-white hover:from-red-600 hover:to-orange-500 transition text-sm sm:text-base">Get Started</a>
+              <a href="#" class="ml-2 sm:ml-3 px-2 sm:px-4 py-2 border-2 border-[#F66844] text-white transition text-sm sm:text-base"><i class="fa-regular fa-circle-play text-[#F66844] mr-1 sm:mr-2"></i>Watch Reviews</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!--=== Icons ===-->
-
-      <div class="flex justify-start absolute gap-6 bg-gradient-to-r from-[#F66844] to-[#FF921B] text-white t-[860px] z-20 lg:[clip-path:polygon(0_0,100%_0,80%_100%,0_100%)] pr-10 py-2">
-        <a href="#" class="text-white text-2xl">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="text-white text-2xl">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="#" class="text-white text-2xl">
-          <i class="fab fa-youtube"></i>
-        </a>
-      </div>
     </header>
+    <!-===============- hero_section_end -=============->
 
+    <!-===============- fitness_section_start -=============->
 
-  <!-===============- hero_section_end -=============->
+    <section class="relative py-12 sm:py-16">
+      <img src="images/revers_banner.png" alt="" class="absolute inset-0 w-full h-full object-cover">
+      <div class="relative container mx-auto px-4 sm:px-6 z-10">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center lg:text-left mb-10 lg:mb-12">Fitness Plans & <span class="text-orange-500">Nutritions</span></h2>
 
-  <!-===============- service_section_start -=============->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-white text-center">
 
-    <section class="relative h-[120vh] w-full">
-      <img src="images/revers_banner.png" alt="" class="absolute bg-[rgba(9,5,5,19)] w-full h-full lg:object-fill">
+          <div class="p-8 sm:p-10 lg:p-16 lg:border-r border-b border-orange-500 flex items-center flex-col">
+            <img src="images/workout 1.png" alt="" class="h-14 sm:h-16 mb-4">
+            <h3 class="text-lg sm:text-xl font-semibold mb-6 sm:mb-8">Weight Loss</h3>
+            <p class="opacity-70 text-xs sm:text-sm">Weight loss can have causes that aren't due to underlying disease. Examples include dieting, exercise, malnutrition or lack of access to food.</p>
+          </div>
 
+          <div class="p-8 sm:p-10 lg:p-16 lg:border-r border-b border-orange-500 flex items-center flex-col">
+            <img src="images/yoga 1.png" alt="" class="h-14 sm:h-16 mb-4">
+            <h3 class="text-lg sm:text-xl font-semibold mb-6 sm:mb-8">Classic Yoga</h3>
+            <p class="opacity-70 text-xs sm:text-sm">The term "yoga" in the Western world often denotes a modern form of Hatha yoga and a posture-based physical fitness, stress-relief.</p>
+          </div>
 
-      <div class="relative container mx-auto px-6 z-10 h-full flex flex-col pt-20 ">
+          <div class="p-8 sm:p-10 lg:p-16 lg:border-b border-b border-orange-500 flex items-center flex-col">
+            <img src="images/bicycle 1.png" alt="" class="h-14 sm:h-16 mb-4">
+            <h3 class="text-lg sm:text-xl font-semibold mb-6 sm:mb-8">Cycling</h3>
+            <p class="opacity-70 text-xs sm:text-sm">Cycling, also, when on a two-wheeled bicycle, called bicycling or biking, is the use of cycles for transport, recreation, exercise or sport.</p>
+          </div>
 
-        <h2 class="text-4xl font-bold text-white text-center lg:text-left mb-12 relative z-10">Fitness Plans & <span class="text-orange-500">Nutritions</span></h2>
+          <div class="p-8 sm:p-10 lg:p-16 lg:border-r border-b lg:border-b-0 border-orange-500 flex items-center flex-col">
+            <img src="images/biceps.png" alt="" class="h-14 sm:h-16 mb-4">
+            <h3 class="text-lg sm:text-xl font-semibold mb-6 sm:mb-8">Body Building</h3>
+            <p class="opacity-70 text-xs sm:text-sm">Bodybuilding is the use of progressive resistance exercise to control and develop one's muscles by muscle hypertrophy for aesthetic purposes.</p>
+          </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-white text-center">
-            
-            <div class="p-16 lg:border-r border-b border-orange-500 last:border-b-0 lg:last:border-r-0 flex  items-center flex-col">
-              <div class="text-5xl mb-4">
-                <img src="images/workout 1.png" alt="">
-              </div>
-              <h3 class="text-xl font-semibold mb-8">Weight Loss</h3>
-              <p class=" opacity-70 text-sm">Weight loss can have causes that aren't due to underlying disease. Examples include dieting, exercise, malnutrition or lack of access to food.</p>
-            </div>
+          <div class="p-8 sm:p-10 lg:p-16 lg:border-r border-b lg:border-b-0 border-orange-500 flex items-center flex-col">
+            <img src="images/fitness.png" alt="" class="h-14 sm:h-16 mb-4">
+            <h3 class="text-lg sm:text-xl font-semibold mb-6 sm:mb-8">Musculation</h3>
+            <p class="opacity-70 text-xs sm:text-sm">Weight training is a common type of strength training for developing the strength, size of skeletal muscles and maintenance of strength.</p>
+          </div>
 
-            <div class="p-16 lg:border-r border-b border-orange-500 last:border-b-0 lg:last:border-r-0 flex items-center flex-col">
-              <div class="text-5xl mb-4">
-                <img src="images/yoga 1.png" alt="">
-              </div>
-              <h3 class="text-xl font-semibold mb-8">Classic Yoga</h3>
-              <p class="text-sm opacity-70">The term "yoga" in the Western world often denotes a modern form of Hatha yoga and a posture-based physical fitness, stress-relief.</p>
-            </div>
-
-            <div class="p-16 lg:border-b border-orange-500 last:border-b-0 flex items-center flex-col">
-              <div class="text-5xl mb-4">
-                <img src="images/bicycle 1.png" alt="">
-              </div>
-              <h3 class="text-xl font-semibold mb-8">Cycling</h3>
-              <p class="text-sm opacity-70">Cycling, also, when on a two-wheeled bicycle, called bicycling or biking, is the use of cycles for transport, recreation, exercise or sport.</p>
-            </div>
-            
-            <div class="p-16 lg:border-r border-orange-500 last:border-r-0 flex items-center flex-col">
-              <div class="text-5xl mb-4 ">
-                <img src="images/biceps.png" alt="">
-              </div>
-              <h3 class="text-xl font-semibold mb-8">Body Building</h3>
-              <p class="text-sm opacity-70">Bodybuilding is the use of progressive resistance exercise to control and develop one's muscles by muscle hypertrophy for aesthetic purposes.</p>
-            </div>
-
-            <div class="p-16 lg:border-r border-orange-500 last:border-r-0 flex items-center flex-col">
-              <div class="text-5xl mb-4">
-                <img src="images/fitness.png" alt="">
-              </div>
-              <h3 class="text-xl font-semibold mb-8">Musculation</h3>
-              <p class="text-sm opacity-70">Weight training is a common type of strength training for developing the strength, size of skeletal muscles and maintenance of strength.</p>
-            </div>
-
-            <div class="p-16 lg:border-r border-orange-500 last:border-r-0 flex items-center flex-col">
-              <div class="text-5xl mb-4">
-                <img src="images/runer-silhouette-running-fast.png" alt="">
-              </div>
-              <h3 class="text-xl font-semibold mb-8">Fitness Running</h3>
-              <p class="text-sm opacity-70">Running is a method of terrestrial locomotion allowing humans and other animals to move rapidly on foot.</p>
-            </div>
+          <div class="p-8 sm:p-10 lg:p-16 lg:border-none md:border-b border-orange-500 flex items-center flex-col">
+            <img src="images/runer-silhouette-running-fast.png" alt="" class="h-14 sm:h-16 mb-4">
+            <h3 class="text-lg sm:text-xl font-semibold mb-6 sm:mb-8">Fitness Running</h3>
+            <p class="opacity-70 text-xs sm:text-sm">Running is a method of terrestrial locomotion allowing humans and other animals to move rapidly on foot.</p>
           </div>
         </div>
       </div>
     </section>
 
-  <!-===============- service_section_end -=============->
+    <!-===============- fitness_section_end -=============->
 
-  <!-===============- about_section_end -=============->
+    <!-===============- plans_section_start -=============->
 
     <section class="bg-black py-12">
       <div class="container mx-auto text-center px-6 mt-16">
@@ -203,7 +163,7 @@
           </div>
 
 
-          <div class="relative bg-gradient-to-b from-[rgba(255,255,255,0.15)] to-[rgba(0,0,0,0.9)] text-white p-6 shadow-lg w-80 h-[480px] -mt-20">
+          <div class="relative bg-gradient-to-b from-[rgba(255,255,255,0.15)] to-[rgba(0,0,0,0.9)] text-white p-6 shadow-lg w-80 h-[480px] lg:-mt-20">
 
             <span class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-white text-black text-sm font-semibold px-4 py-2 rounded shadow-lg">Recommended</span>
 
@@ -227,31 +187,60 @@
       </div>
     </section>
 
-  <!-===============- about_section_end -=============->
-  <!-===============- about_section_end -=============->
+    <!-===============- plans_section_start -=============->
 
+    <!-===============- trainer_section_start -=============->
 
     <section class="bg-black py-12">
-      <div class="container mx-auto text-center px-16">
-        <h2 class="text-4xl font-bold text-start text-white mb-28">Join Our <span class="text-orange-500">Trainer</span></h2>
+      <div class="container mx-auto px-4 sm:px-6">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-12 text-center lg:text-left">Join Our <span class="text-orange-500">Trainer</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <img src="images/trainer_01.png" alt="" class="w-64 sm:w-72 object-cover shadow-lg">
+          <img src="images/trainer_02.png" alt="" class="w-64 sm:w-72 object-cover shadow-lg">
+          <img src="images/trainer_03.png" alt="" class="w-64 sm:w-72 object-cover shadow-lg">
+        </div>
+      </div>
+    </section>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 px-10">
-          <div>
-            <img src="images/trainer_01.png" alt="" class="w-72 h-90 object-cover shadow-lg">
+    <!-===============- trainer_section_end -=============->
+
+    <!-===============- Join_section_start -=============->
+
+    <section class="bg-black text-white py-12">
+      <div class="container mx-auto grid lg:grid-cols-2 gap-10 items-center">
+        
+        <div class="ml-44">
+          <h2 class="text-4xl md:text-3xl font-bold -ml-24 mb-24">
+            Why Join With <span class="text-orange-500">Us?</span>
+          </h2>
+
+          <div class="p-6 rounded-md bg-gradient-to-b from-[rgba(255,255,255,0.15)] to-[rgba(0,0,0,0.9)] text-white space-y-4">
+            <ul class="list-disc list-inside marker:text-orange-500 marker:text-lg font-bold space-y-2">
+              <li>Best Gym</li>
+              <li>Experts Coach</li>
+              <li>Good Workout Facilities</li>
+              <li>Consultation With Experts</li>
+            </ul>
+            
+            <a class="text-white py-2 px-5 bg-gradient-to-r mt-24 -ml-6 from-[#F66844] to-[#FF921B] inline-block" href="#">See More Benifits</a>
           </div>
-          <div>
-            <img src="images/trainer_02.png" alt="" class="w-72 h-90 object-cover shadow-lg">
-          </div>
-          <div>
-            <img src="images/trainer_03.png" alt="" class="w-72 h-90 object-cover shadow-lg">
-          </div>
+        </div>
+
+        <div class="grid grid-rows-2 sm:gap-6 p-44">
+          <img src="images/join_us_01.png" alt="" class="justify-self-start lg:w-36 sm:w-64">
+          <img src="images/join_us_02.png" alt="" class="justify-self-end lg:w-36 sm:w-64 mt-2">
         </div>
       </div>
     </section>
 
 
-  <!-===============- about_section_end -=============->
+    <!-===============- Join_section_end -=============->
 
+    <!-===============- footer_section_start -=============->
+
+
+
+    <!-===============- footer_section_start -=============->
 
 
 </body>
