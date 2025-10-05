@@ -7,7 +7,12 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+
+
     <style>
         *{
         font-family: Lucida Sans;
@@ -21,14 +26,15 @@
 <!-==============- header-start -==============->
     
     <header class="bg-black">
-      <!-==- start-nav -==->
+
+      <!-- == start-nav == -->
       <div class="py-4">
         <div class="flex items-center justify-between container mx-auto px-12">
-        
+          
           <div class="flex flex-col">
             <div class="flex items-center gap-3">
               <img src="images/logo_left.png" alt="">
-              <h5 class="text-xl bg-gradient-to-r from-[#F66844] to-[#6b2306] bg-clip-text text-transparent font-josefin">
+              <h5 class="text-xl bg-gradient-to-r from-[#F66844] to-[#6b2306] bg-clip-text text-transparent">
                 Bodyshape
               </h5>
               <img src="images/logo_right.png" alt="">
@@ -36,12 +42,11 @@
             <span class="text-xs mt-2 text-center bg-gradient-to-r from-[#F66844] to-[#6b2306] bg-clip-text text-transparent">Unleash your inner athlete</span>
           </div>
 
-
-          <ul class="flex text-white gap-12">
-            <li><a href="" class="pb-1 border-b-3 border-transparent hover:border-[#F66844] transition-all">Home</a></li>
-            <li><a href="" class="pb-1 border-b-3 border-transparent hover:border-[#F66844] transition-all">Service</a></li>
-            <li><a href="" class="pb-1 border-b-3 border-transparent hover:border-[#F66844] transition-all">About</a></li>
-            <li><a href="" class="pb-1 border-b-3 border-transparent hover:border-[#F66844] transition-all">Contacts</a></li>
+          <ul class="hidden lg:flex text-white gap-12">
+            <li><a href="" class="pb-1 border-b-2 border-transparent hover:border-[#F66844] transition-all">Home</a></li>
+            <li><a href="" class="pb-1 border-b-2 border-transparent hover:border-[#F66844] transition-all">Service</a></li>
+            <li><a href="" class="pb-1 border-b-2 border-transparent hover:border-[#F66844] transition-all">About</a></li>
+            <li><a href="" class="pb-1 border-b-2 border-transparent hover:border-[#F66844] transition-all">Contacts</a></li>
             <li>
               <a class="text-white text-center py-3 px-5 bg-gradient-to-r from-[#F66844] to-[#FF921B]" href="">
                 Join Us
@@ -49,32 +54,204 @@
             </li>
           </ul>
 
+          <div class="lg:hidden">
+
+            <input type="checkbox" id="menu-toggle" class="hidden peer">
+
+            <label for="menu-toggle" class="cursor-pointer text-white text-3xl">
+              <i class="ri-menu-line"></i>
+            </label>
+
+            <div class="absolute left-0 top-16 w-full bg-black text-white hidden peer-checked:block">
+              <ul class="flex flex-col gap-6 px-6 py-6">
+                <li><a href="#" class="hover:text-[#F66844]">Home</a></li>
+                <li><a href="#" class="hover:text-[#F66844]">Service</a></li>
+                <li><a href="#" class="hover:text-[#F66844]">About</a></li>
+                <li><a href="#" class="hover:text-[#F66844]">Contacts</a></li>
+                <li>
+                  <a class="text-white py-2 px-5 bg-gradient-to-r from-[#F66844] to-[#FF921B] rounded inline-block" href="#">
+                    Join Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <!-==- start-hero -==->
+      <!-- == start-hero == -->
+      
+      <section class="relative lg:h-[120vh] w-full">
+        <img src="images/banner.png" alt="" class="absolute inset-0 w-full h-full object-cover">
 
-      <section class="relative h-[120vh] w-full">
-        <img src="images/banner.png" alt="" class="absolute inset-0 w-full h-full lg:object-fill">
+        <div class="relative container mx-auto px-4 sm:px-6 lg:px-12 z-10 h-full flex items-center">
+          <div class="text-white max-w-xl">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold">Transform <br>Your Body</h1>
+            <p class="text-sm sm:text-base text-gray-400 mt-6 sm:mt-10">We are dedicated to helping you transform your body and mind through the power of fitness.</p>
 
-        <div class="relative container mx-auto px-6 z-10 h-full flex items-center shadow-white">
-          <div class="text-white px-12 max-w-xl absolute">
-           <div class="mb-80">
-              <h1 class="text-5xl font-extrabold">Transform <br class="mb-2">Your Body</h1>
-              <p class="text-sm text-gray-400 mt-10">We are dedicated to helping you transform your <br>body and mind through the power of fitness.</p>
-
-              <div class="mt-24">
-                <a href="#" class="px-6 py-3 bg-gradient-to-r from-[#F66844] to-[#FF921B] text-white hover:from-red-600 hover:to-orange-500 transition">Get Started</a>
-                <a href="#" class="ml-3 px-5 py-[10px] border-2 border-[#F66844] text-white transition"><i class="fa-regular fa-circle-play text-[#F66844] mr-2"></i>Watch Reviews</a>
-              </div>
+            <div class="mt-10 sm:mt-16 lg:mt-24">
+              <a href="#" class="px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-[#F66844] to-[#FF921B] text-white hover:from-red-600 hover:to-orange-500 transition">Get Started</a>
+              <a href="#" class="ml-2 sm:ml-3 px-3 sm:px-5 py-2 border-2 border-[#F66844] text-white transition"><i class="fa-regular fa-circle-play text-[#F66844] mr-1 sm:mr-2"></i>Watch Reviews</a>
             </div>
           </div>
         </div>
       </section>
 
+      <!--=== Icons ===-->
+
+      <div class="flex justify-start absolute gap-6 bg-gradient-to-r from-[#F66844] to-[#FF921B] text-white t-[860px] z-20 lg:[clip-path:polygon(0_0,100%_0,80%_100%,0_100%)] pr-10 py-2">
+        <a href="#" class="text-white text-2xl">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="text-white text-2xl">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="#" class="text-white text-2xl">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+    </header>
 
 
-  </header>
+  <!-===============- hero_section_end -=============->
+
+  <!-===============- service_section_start -=============->
+
+    <section class="relative h-[120vh] w-full">
+      <img src="images/revers_banner.png" alt="" class="absolute bg-[rgba(9,5,5,19)] w-full h-full lg:object-fill">
+
+
+      <div class="relative container mx-auto px-6 z-10 h-full flex flex-col pt-20 ">
+
+        <h2 class="text-4xl font-bold text-white text-center lg:text-left mb-12 relative z-10">Fitness Plans & <span class="text-orange-500">Nutritions</span></h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-white text-center">
+            
+            <div class="p-16 lg:border-r border-b border-orange-500 last:border-b-0 lg:last:border-r-0 flex  items-center flex-col">
+              <div class="text-5xl mb-4">
+                <img src="images/workout 1.png" alt="">
+              </div>
+              <h3 class="text-xl font-semibold mb-8">Weight Loss</h3>
+              <p class=" opacity-70 text-sm">Weight loss can have causes that aren't due to underlying disease. Examples include dieting, exercise, malnutrition or lack of access to food.</p>
+            </div>
+
+            <div class="p-16 lg:border-r border-b border-orange-500 last:border-b-0 lg:last:border-r-0 flex items-center flex-col">
+              <div class="text-5xl mb-4">
+                <img src="images/yoga 1.png" alt="">
+              </div>
+              <h3 class="text-xl font-semibold mb-8">Classic Yoga</h3>
+              <p class="text-sm opacity-70">The term "yoga" in the Western world often denotes a modern form of Hatha yoga and a posture-based physical fitness, stress-relief.</p>
+            </div>
+
+            <div class="p-16 lg:border-b border-orange-500 last:border-b-0 flex items-center flex-col">
+              <div class="text-5xl mb-4">
+                <img src="images/bicycle 1.png" alt="">
+              </div>
+              <h3 class="text-xl font-semibold mb-8">Cycling</h3>
+              <p class="text-sm opacity-70">Cycling, also, when on a two-wheeled bicycle, called bicycling or biking, is the use of cycles for transport, recreation, exercise or sport.</p>
+            </div>
+            
+            <div class="p-16 lg:border-r border-orange-500 last:border-r-0 flex items-center flex-col">
+              <div class="text-5xl mb-4 ">
+                <img src="images/biceps.png" alt="">
+              </div>
+              <h3 class="text-xl font-semibold mb-8">Body Building</h3>
+              <p class="text-sm opacity-70">Bodybuilding is the use of progressive resistance exercise to control and develop one's muscles by muscle hypertrophy for aesthetic purposes.</p>
+            </div>
+
+            <div class="p-16 lg:border-r border-orange-500 last:border-r-0 flex items-center flex-col">
+              <div class="text-5xl mb-4">
+                <img src="images/fitness.png" alt="">
+              </div>
+              <h3 class="text-xl font-semibold mb-8">Musculation</h3>
+              <p class="text-sm opacity-70">Weight training is a common type of strength training for developing the strength, size of skeletal muscles and maintenance of strength.</p>
+            </div>
+
+            <div class="p-16 lg:border-r border-orange-500 last:border-r-0 flex items-center flex-col">
+              <div class="text-5xl mb-4">
+                <img src="images/runer-silhouette-running-fast.png" alt="">
+              </div>
+              <h3 class="text-xl font-semibold mb-8">Fitness Running</h3>
+              <p class="text-sm opacity-70">Running is a method of terrestrial locomotion allowing humans and other animals to move rapidly on foot.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-===============- service_section_end -=============->
+
+  <!-===============- about_section_end -=============->
+
+    <section class="bg-black py-12">
+      <div class="container mx-auto text-center px-6 mt-16">
+
+        <h2 class="text-4xl font-bold text-white text-start mb-10">
+          Subscribe To <span class="text-orange-500">Plans</span>
+        </h2>
+
+
+        <div class="mt-24 flex flex-col md:flex-row justify-center items-center gap-16">
+
+          <div class="bg-gradient-to-b from-[rgba(255,255,255,0.15)] to-[rgba(0,0,0,0.9)] text-white p-6 shadow-lg w-80 h-[480px]">
+            <h3 class="text-2xl font-bold mb-4">Fit</h3>
+            <p class="text-gray-400">Plan Exp. 16/11/2024</p>
+            <p class="text-3xl font-semibold mt-12">₹1200 /<span class="text-base font-normal text-gray-400">Month</span></p>
+            <p class="mt-5 text-gray-400">Streaming</p>
+            <button class="mt-10 border border-orange-400 text-white px-10 py-2 hover:bg-orange-500 hover:text-black transition">Select Plan</button>
+          </div>
+
+
+          <div class="relative bg-gradient-to-b from-[rgba(255,255,255,0.15)] to-[rgba(0,0,0,0.9)] text-white p-6 shadow-lg w-80 h-[480px] -mt-20">
+
+            <span class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-white text-black text-sm font-semibold px-4 py-2 rounded shadow-lg">Recommended</span>
+
+            <h3 class="text-2xl font-bold mb-4">Fit</h3>
+            <p class="text-gray-400">Plan Exp. 16/11/2024</p>
+            <p class="text-3xl font-semibold mt-12">₹1500 /<span class="text-base font-normal text-gray-400">Month</span></p>
+            <p class="mt-5 text-gray-400">Streaming</p>
+            <button class="mt-10 border border-orange-400 text-white px-10 py-2 hover:bg-orange-500 hover:text-black transition">Select Plan</button>
+          </div>
+
+
+          <div class="bg-gradient-to-b from-[rgba(255,255,255,0.15)] to-[rgba(0,0,0,0.9)] text-white p-6 shadow-lg w-80 h-[480px]">
+            <h3 class="text-2xl font-bold mb-4">Fit</h3>
+            <p class="text-gray-400">Plan Exp. 16/11/2024</p>
+            <p class="text-3xl font-semibold mt-12">₹1500 /<span class="text-base font-normal text-gray-400">Month</span></p>
+            <p class="mt-5 text-gray-400">Streaming</p>
+            <button class="mt-10 border border-orange-400 text-white px-10 py-2 hover:bg-orange-500 hover:text-black transition">Select Plan</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  <!-===============- about_section_end -=============->
+  <!-===============- about_section_end -=============->
+
+
+    <section class="bg-black py-12">
+      <div class="container mx-auto text-center px-16">
+        <h2 class="text-4xl font-bold text-start text-white mb-28">Join Our <span class="text-orange-500">Trainer</span></h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-1 px-10">
+          <div>
+            <img src="images/trainer_01.png" alt="" class="w-72 h-90 object-cover shadow-lg">
+          </div>
+          <div>
+            <img src="images/trainer_02.png" alt="" class="w-72 h-90 object-cover shadow-lg">
+          </div>
+          <div>
+            <img src="images/trainer_03.png" alt="" class="w-72 h-90 object-cover shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  <!-===============- about_section_end -=============->
+
 
 
 </body>
